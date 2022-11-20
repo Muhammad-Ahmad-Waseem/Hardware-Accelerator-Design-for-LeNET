@@ -1,0 +1,51 @@
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Windows/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 693e3da757b6452f83bd4d077aa79197 --incr --debug typical --relax --mt 2 -L xbip_utils_v3_0_8 -L xbip_pipe_v3_0_4 -L xbip_bram18k_v3_0_4 -L mult_gen_v12_0_13 -L xil_defaultlib -L blk_mem_gen_v8_4_1 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test1_behav xil_defaultlib.test1 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 13 differs from formal bit length 14 for port counter [C:/Users/m_waseem/Semester_project/Semester_project.srcs/sim_1/new/test1.v:44]
+WARNING: [VRFC 10-278] actual bit length 13 differs from formal bit length 14 for port addra_reg [C:/Users/m_waseem/Semester_project/Semester_project.srcs/sim_1/new/test1.v:45]
+WARNING: [VRFC 10-278] actual bit length 13 differs from formal bit length 14 for port addrb_reg [C:/Users/m_waseem/Semester_project/Semester_project.srcs/sim_1/new/test1.v:46]
+WARNING: [VRFC 10-278] actual bit length 14 differs from formal bit length 13 for port addra [C:/Users/m_waseem/Semester_project/Semester_project.srcs/sources_1/new/main_module.v:382]
+WARNING: [VRFC 10-1783] select index 30 into current_contents is out of bounds [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_4/simulation/blk_mem_gen_v8_4.v:2419]
+WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_4/simulation/blk_mem_gen_v8_4.v:2420]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package mult_gen_v12_0_13.mult_gen_v12_0_13_viv_comp
+Compiling package xbip_utils_v3_0_8.xbip_utils_v3_0_8_pkg
+Compiling package mult_gen_v12_0_13.mult_gen_v12_0_13_pkg
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package unisim.vcomponents
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_axi_regs_fwd_v8_4(C_DATA...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_FAMILY="art...
+Compiling module xil_defaultlib.RAM
+Compiling architecture lut2_v of entity unisim.LUT2 [\LUT2(init="1000")(0,3)\]
+Compiling architecture mult_and_v of entity unisim.MULT_AND [mult_and_default]
+Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
+Compiling architecture xorcy_v of entity unisim.XORCY [xorcy_default]
+Compiling architecture xilinx of entity mult_gen_v12_0_13.op_resize [\op_resize(ao_width=19,bo_width=...]
+Compiling architecture xilinx of entity mult_gen_v12_0_13.luts [\luts(c_xdevicefamily="artix7",c...]
+Compiling architecture xilinx of entity mult_gen_v12_0_13.mult_gen_v12_0_13_viv [\mult_gen_v12_0_13_viv(c_verbosi...]
+Compiling architecture xilinx of entity mult_gen_v12_0_13.mult_gen_v12_0_13 [\mult_gen_v12_0_13(c_xdevicefami...]
+Compiling architecture mul_arch of entity xil_defaultlib.MUL [mul_default]
+Compiling module xil_defaultlib.Compute_Engine
+Compiling module xil_defaultlib.Compute_Engine2
+Compiling module xil_defaultlib.Dense_Engine
+Compiling module xil_defaultlib.main_module
+Compiling module xil_defaultlib.test1
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test1_behav

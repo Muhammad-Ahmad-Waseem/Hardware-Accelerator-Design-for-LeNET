@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Semester_project.srcs/sources_1/ip/RAM/sim/RAM.v" \
+"../../../../Semester_project.srcs/sources_1/new/Compute_Engine.v" \
+"../../../../Semester_project.srcs/sources_1/new/Compute_Engine2.v" \
+"../../../../Semester_project.srcs/sources_1/new/Dense_Engine.v" \
+"../../../../Semester_project.srcs/sources_1/new/main_module.v" \
+"../../../../Semester_project.srcs/sim_1/new/test1.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

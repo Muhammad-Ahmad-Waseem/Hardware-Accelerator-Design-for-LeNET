@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Webtalk v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Feb  9 11:29:59 2022
+# Process ID: 28396
+# Current directory: C:/Users/m_waseem/Semester_project/Semester_project.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source C:/Users/m_waseem/Semester_project/Semester_project.sim/sim_1/behav/xsim/xsim.dir/test_mul_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/m_waseem/Semester_project/Semester_project.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: C:/Users/m_waseem/Semester_project/Semester_project.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/m_waseem/Semester_project/Semester_project.sim/sim_1/behav/xsim/xsim.dir/test_mul_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Wed Feb  9 11:30:02 2022...
