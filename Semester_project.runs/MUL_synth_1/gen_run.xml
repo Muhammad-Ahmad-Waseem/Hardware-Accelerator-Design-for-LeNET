@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="MUL_synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1643136462">
+  <File Type="PA-TCL" Name="MUL.tcl"/>
+  <File Type="REPORTS-TCL" Name="MUL_reports.tcl"/>
+  <File Type="RDS-RDS" Name="MUL.vds"/>
+  <File Type="RDS-UTIL" Name="MUL_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="MUL_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="MUL.dcp"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/MUL">
+    <File Path="$PSRCDIR/sources_1/ip/MUL/MUL.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="MUL"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/MUL">
+    <File Path="$PSRCDIR/sources_1/ip/MUL/MUL.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="MUL"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

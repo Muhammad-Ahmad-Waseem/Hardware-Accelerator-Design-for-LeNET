@@ -1,0 +1,978 @@
+
+*** Running vivado
+    with args -log main_module.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_module.tcl
+
+
+****** Vivado v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source main_module.tcl -notrace
+Command: synth_design -top main_module -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 35168 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 355.562 ; gain = 100.523
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'main_module' [C:/Users/m_waseem/Semester_project/Semester_project.srcs/sources_1/new/main_module.v:44]
+INFO: [Synth 8-638] synthesizing module 'RAM' [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/realtime/RAM_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'RAM' (1#1) [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/realtime/RAM_stub.v:6]
+WARNING: [Synth 8-689] width (1) of port connection 'dina' does not match port width (16) of module 'RAM' [C:/Users/m_waseem/Semester_project/Semester_project.srcs/sources_1/new/main_module.v:186]
+INFO: [Synth 8-638] synthesizing module 'Compute_Engine' [C:/Users/m_waseem/Semester_project/Semester_project.srcs/sources_1/new/Compute_Engine.v:23]
+INFO: [Synth 8-638] synthesizing module 'MUL' [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/realtime/MUL_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'MUL' (2#1) [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/realtime/MUL_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'Compute_Engine' (3#1) [C:/Users/m_waseem/Semester_project/Semester_project.srcs/sources_1/new/Compute_Engine.v:23]
+WARNING: [Synth 8-6014] Unused sequential element ly1_tile_reg was removed. 
+WARNING: [Synth 8-3848] Net inp in module/entity main_module does not have driver. [C:/Users/m_waseem/Semester_project/Semester_project.srcs/sources_1/new/main_module.v:186]
+WARNING: [Synth 8-3848] Net inpb in module/entity main_module does not have driver. [C:/Users/m_waseem/Semester_project/Semester_project.srcs/sources_1/new/main_module.v:52]
+INFO: [Synth 8-256] done synthesizing module 'main_module' (4#1) [C:/Users/m_waseem/Semester_project/Semester_project.srcs/sources_1/new/main_module.v:44]
+WARNING: [Synth 8-3331] design Compute_Engine has unconnected port reset
+WARNING: [Synth 8-3331] design Compute_Engine has unconnected port enable
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 470.492 ; gain = 215.453
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 470.492 ; gain = 215.453
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp2/RAM_in_context.xdc] for cell 'myRam'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp2/RAM_in_context.xdc] for cell 'myRam'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M00'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M00'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M01'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M01'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M02'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M02'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M03'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M03'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M04'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M04'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M05'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M05'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M06'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M06'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M07'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M07'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M08'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M08'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M09'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M09'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M10'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M10'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M11'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M11'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M12'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M12'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M13'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M13'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M14'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M14'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M15'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M15'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M16'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M16'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M17'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M17'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M18'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M18'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M19'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M19'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M20'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M20'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M21'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M21'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M22'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M22'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M23'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M23'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M24'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M24'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M25'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M25'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M26'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M26'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M27'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M27'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M28'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M28'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M29'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M29'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M30'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M30'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M31'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M31'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M32'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M32'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M33'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M33'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M34'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M34'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M35'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M35'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M36'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M36'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M37'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M37'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M38'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M38'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M39'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M39'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M40'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M40'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M41'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M41'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M42'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M42'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M43'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M43'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M44'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M44'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M45'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M45'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M46'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M46'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M47'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M47'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M48'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M48'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M49'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M49'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M50'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M50'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M51'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M51'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M52'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M52'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M53'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M53'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M54'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M54'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M55'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M55'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M56'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M56'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M57'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M57'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M58'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M58'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M59'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M59'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M60'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M60'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M61'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M61'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M62'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M62'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M63'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M63'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M64'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M64'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M65'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M65'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M66'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M66'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M67'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M67'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M68'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M68'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M69'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M69'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M70'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M70'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M71'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M71'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M72'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M72'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M73'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M73'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M74'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M74'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M75'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M75'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M76'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M76'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M77'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M77'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M78'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M78'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M79'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M79'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M80'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M80'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M81'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M81'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M82'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M82'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M83'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M83'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M84'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M84'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M85'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M85'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M86'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M86'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M87'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M87'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M88'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M88'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M89'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M89'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M90'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M90'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M91'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M91'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M92'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M92'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M93'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M93'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M94'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M94'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M95'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M95'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M96'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M96'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M97'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M97'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M98'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M98'
+Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M99'
+Finished Parsing XDC File [C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/.Xil/Vivado-12592-EE-114103LT/dcp3/MUL_in_context.xdc] for cell 'myCE/M99'
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 815.797 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 815.797 ; gain = 560.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 815.797 ; gain = 560.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for myCE/M00. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M01. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M02. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M03. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M04. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M05. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M06. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M07. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M08. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M09. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M10. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M11. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M12. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M13. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M14. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M15. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M16. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M17. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M18. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M19. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M20. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M21. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M22. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M23. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M24. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M25. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M26. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M27. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M28. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M29. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M30. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M31. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M32. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M33. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M34. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M35. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M36. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M37. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M38. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M39. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M40. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M41. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M42. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M43. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M44. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M45. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M46. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M47. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M48. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M49. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M50. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M51. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M52. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M53. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M54. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M55. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M56. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M57. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M58. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M59. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M60. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M61. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M62. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M63. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M64. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M65. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M66. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M67. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M68. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M69. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M70. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M71. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M72. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M73. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M74. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M75. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M76. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M77. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M78. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M79. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M80. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M81. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M82. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M83. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M84. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M85. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M86. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M87. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M88. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M89. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M90. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M91. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M92. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M93. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M94. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M95. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M96. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M97. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M98. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myCE/M99. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for myRam. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 815.797 ; gain = 560.758
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[2]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[3]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[4]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[5]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[6]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[7]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[8]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[9]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[10]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[11]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[12]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[13]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[14]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[15]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[16]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[18]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[19]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[20]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[21]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[22]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[23]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[24]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[25]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[25]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[26]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[26]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[27]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[27]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[28]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[28]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[29]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[29]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[30]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[30]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[31]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[31]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[32]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[32]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[33]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[33]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[34]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[34]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[35]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[35]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[36]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[36]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[37]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[37]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[38]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[38]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[39]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[39]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[40]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[40]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[41]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[41]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[42]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[42]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[43]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[43]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[44]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[44]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[45]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[45]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[46]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[46]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[47]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[47]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[48]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[48]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[49]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[49]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[50]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[50]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[51]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[51]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[52]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[52]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[53]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[53]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[54]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[54]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[55]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[55]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[56]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[56]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[57]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[57]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[58]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[58]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[59]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[59]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[60]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[60]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[61]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[61]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[62]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[62]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[63]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[63]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[64]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[64]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[65]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[65]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[66]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[66]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[67]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[67]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[68]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[68]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[69]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[69]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[70]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[70]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[71]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[71]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[72]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[72]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[73]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[73]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[74]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[74]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[75]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[75]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[76]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[76]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[77]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[77]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[78]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[78]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[79]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[79]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[80]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[80]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[81]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[81]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[82]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[82]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[83]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[83]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[84]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[84]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[85]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[85]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[86]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[86]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[87]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[87]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[88]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[88]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[89]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[89]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[90]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[90]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[91]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[91]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[92]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[92]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[93]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[93]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[94]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[94]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[95]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[95]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[96]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[96]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[97]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[97]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[98]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[98]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[99]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[99]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "ifm_tile_reg[100]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[100]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[101]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[102]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[103]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[104]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[105]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[106]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[107]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[108]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[109]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[110]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[111]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[112]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[113]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[114]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[115]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[116]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[117]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[118]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[119]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[120]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[121]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[122]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ifm_tile_reg[123]" won't be mapped to RAM because it is too sparse
+INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 815.797 ; gain = 560.758
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------+------------+----------+
+|      |RTL Partition    |Replication |Instances |
++------+-----------------+------------+----------+
+|1     |main_module__GB0 |           1|     37675|
+|2     |main_module__GB1 |           1|     13605|
+|3     |main_module__GB2 |           1|     17862|
+|4     |main_module__GB3 |           1|     18745|
+|5     |main_module__GB4 |           1|     21425|
+|6     |main_module__GB5 |           1|     26760|
++------+-----------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	  25 Input     32 Bit       Adders := 4     
+	   4 Input     32 Bit       Adders := 1     
+	   2 Input     13 Bit       Adders := 3     
++---Registers : 
+	               16 Bit    Registers := 193   
+	               13 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   2 Input     16 Bit        Muxes := 191   
+	   5 Input     13 Bit        Muxes := 3     
+	   2 Input     13 Bit        Muxes := 5     
+	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 201   
+	   2 Input      1 Bit        Muxes := 359   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module main_module 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     13 Bit       Adders := 3     
++---Registers : 
+	               16 Bit    Registers := 193   
+	               13 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 191   
+	   5 Input     13 Bit        Muxes := 3     
+	   2 Input     13 Bit        Muxes := 5     
+	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 201   
+	   2 Input      1 Bit        Muxes := 359   
+Module Compute_Engine 
+Detailed RTL Component Info : 
++---Adders : 
+	  25 Input     32 Bit       Adders := 4     
+	   4 Input     32 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (save_done_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\state_reg[2] )
+WARNING: [Synth 8-3917] design main_module__GB2 has port P[0] driven by constant 0
+WARNING: [Synth 8-3331] design Compute_Engine has unconnected port reset
+WARNING: [Synth 8-3331] design Compute_Engine has unconnected port enable
+INFO: [Synth 8-3886] merging instance 'counter_reg[0]__0' (FDRE) to 'counter_reg[0]'
+INFO: [Synth 8-3886] merging instance 'counter_reg[1]__0' (FDRE) to 'counter_reg[1]'
+INFO: [Synth 8-3886] merging instance 'counter_reg[2]__0' (FDRE) to 'counter_reg[2]'
+INFO: [Synth 8-3886] merging instance 'counter_reg[3]__0' (FDRE) to 'counter_reg[3]'
+INFO: [Synth 8-3886] merging instance 'counter_reg[4]__0' (FDRE) to 'counter_reg[4]'
+INFO: [Synth 8-3886] merging instance 'counter_reg[5]__0' (FDRE) to 'counter_reg[5]'
+INFO: [Synth 8-3886] merging instance 'counter_reg[6]__0' (FDRE) to 'counter_reg[6]'
+INFO: [Synth 8-3886] merging instance 'counter_reg[11]__0' (FDRE) to 'counter_reg[11]'
+INFO: [Synth 8-3886] merging instance 'counter_reg[12]__0' (FDRE) to 'counter_reg[12]'
+INFO: [Synth 8-3886] merging instance 'counter_reg[10]__0' (FDRE) to 'counter_reg[10]'
+INFO: [Synth 8-3886] merging instance 'counter_reg[9]__0' (FDRE) to 'counter_reg[9]'
+INFO: [Synth 8-3886] merging instance 'counter_reg[8]__0' (FDRE) to 'counter_reg[8]'
+INFO: [Synth 8-3886] merging instance 'counter_reg[7]__0' (FDRE) to 'counter_reg[7]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:01:01 . Memory (MB): peak = 815.797 ; gain = 560.758
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------+------------+----------+
+|      |RTL Partition    |Replication |Instances |
++------+-----------------+------------+----------+
+|1     |main_module__GB0 |           1|     17362|
+|2     |main_module__GB1 |           1|      7900|
+|3     |main_module__GB2 |           1|     18660|
+|4     |main_module__GB3 |           1|      9836|
+|5     |main_module__GB4 |           1|     10105|
+|6     |main_module__GB5 |           1|     11548|
++------+-----------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:48 ; elapsed = 00:01:08 . Memory (MB): peak = 915.293 ; gain = 660.254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:49 ; elapsed = 00:01:09 . Memory (MB): peak = 920.855 ; gain = 665.816
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------+------------+----------+
+|      |RTL Partition    |Replication |Instances |
++------+-----------------+------------+----------+
+|1     |main_module__GB0 |           1|     14681|
+|2     |main_module__GB1 |           1|      7900|
+|3     |main_module__GB2 |           1|     18660|
+|4     |main_module__GB3 |           1|      7155|
+|5     |main_module__GB4 |           1|      7430|
+|6     |main_module__GB5 |           1|      8870|
++------+-----------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:52 ; elapsed = 00:01:20 . Memory (MB): peak = 942.262 ; gain = 687.223
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------+------------+----------+
+|      |RTL Partition    |Replication |Instances |
++------+-----------------+------------+----------+
+|1     |main_module__GB0 |           1|      7781|
+|2     |main_module__GB2 |           1|      5849|
++------+-----------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-4442] BlackBox module myRam has unconnected pin dina[0]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module myRam has unconnected pin dinb[15]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module myRam has unconnected pin dinb[14]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module myRam has unconnected pin dinb[13]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module myRam has unconnected pin dinb[12]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module myRam has unconnected pin dinb[11]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module myRam has unconnected pin dinb[10]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module myRam has unconnected pin dinb[9]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module myRam has unconnected pin dinb[8]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module myRam has unconnected pin dinb[7]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module myRam has unconnected pin dinb[6]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module myRam has unconnected pin dinb[5]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module myRam has unconnected pin dinb[4]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module myRam has unconnected pin dinb[3]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module myRam has unconnected pin dinb[2]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module myRam has unconnected pin dinb[1]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module myRam has unconnected pin dinb[0]
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:55 ; elapsed = 00:01:22 . Memory (MB): peak = 942.262 ; gain = 687.223
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:55 ; elapsed = 00:01:23 . Memory (MB): peak = 942.262 ; gain = 687.223
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:55 ; elapsed = 00:01:23 . Memory (MB): peak = 942.262 ; gain = 687.223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:56 ; elapsed = 00:01:23 . Memory (MB): peak = 942.262 ; gain = 687.223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:57 ; elapsed = 00:01:24 . Memory (MB): peak = 942.262 ; gain = 687.223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:57 ; elapsed = 00:01:24 . Memory (MB): peak = 942.262 ; gain = 687.223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |RAM           |         1|
+|2     |MUL           |       100|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |MUL     |     1|
+|2     |MUL__1  |     1|
+|3     |MUL__10 |     1|
+|4     |MUL__11 |     1|
+|5     |MUL__12 |     1|
+|6     |MUL__13 |     1|
+|7     |MUL__14 |     1|
+|8     |MUL__15 |     1|
+|9     |MUL__16 |     1|
+|10    |MUL__17 |     1|
+|11    |MUL__18 |     1|
+|12    |MUL__19 |     1|
+|13    |MUL__2  |     1|
+|14    |MUL__20 |     1|
+|15    |MUL__21 |     1|
+|16    |MUL__22 |     1|
+|17    |MUL__23 |     1|
+|18    |MUL__24 |     1|
+|19    |MUL__25 |     1|
+|20    |MUL__26 |     1|
+|21    |MUL__27 |     1|
+|22    |MUL__28 |     1|
+|23    |MUL__29 |     1|
+|24    |MUL__3  |     1|
+|25    |MUL__30 |     1|
+|26    |MUL__31 |     1|
+|27    |MUL__32 |     1|
+|28    |MUL__33 |     1|
+|29    |MUL__34 |     1|
+|30    |MUL__35 |     1|
+|31    |MUL__36 |     1|
+|32    |MUL__37 |     1|
+|33    |MUL__38 |     1|
+|34    |MUL__39 |     1|
+|35    |MUL__4  |     1|
+|36    |MUL__40 |     1|
+|37    |MUL__41 |     1|
+|38    |MUL__42 |     1|
+|39    |MUL__43 |     1|
+|40    |MUL__44 |     1|
+|41    |MUL__45 |     1|
+|42    |MUL__46 |     1|
+|43    |MUL__47 |     1|
+|44    |MUL__48 |     1|
+|45    |MUL__49 |     1|
+|46    |MUL__5  |     1|
+|47    |MUL__50 |     1|
+|48    |MUL__51 |     1|
+|49    |MUL__52 |     1|
+|50    |MUL__53 |     1|
+|51    |MUL__54 |     1|
+|52    |MUL__55 |     1|
+|53    |MUL__56 |     1|
+|54    |MUL__57 |     1|
+|55    |MUL__58 |     1|
+|56    |MUL__59 |     1|
+|57    |MUL__6  |     1|
+|58    |MUL__60 |     1|
+|59    |MUL__61 |     1|
+|60    |MUL__62 |     1|
+|61    |MUL__63 |     1|
+|62    |MUL__64 |     1|
+|63    |MUL__65 |     1|
+|64    |MUL__66 |     1|
+|65    |MUL__67 |     1|
+|66    |MUL__68 |     1|
+|67    |MUL__69 |     1|
+|68    |MUL__7  |     1|
+|69    |MUL__70 |     1|
+|70    |MUL__71 |     1|
+|71    |MUL__72 |     1|
+|72    |MUL__73 |     1|
+|73    |MUL__74 |     1|
+|74    |MUL__75 |     1|
+|75    |MUL__76 |     1|
+|76    |MUL__77 |     1|
+|77    |MUL__78 |     1|
+|78    |MUL__79 |     1|
+|79    |MUL__8  |     1|
+|80    |MUL__80 |     1|
+|81    |MUL__81 |     1|
+|82    |MUL__82 |     1|
+|83    |MUL__83 |     1|
+|84    |MUL__84 |     1|
+|85    |MUL__85 |     1|
+|86    |MUL__86 |     1|
+|87    |MUL__87 |     1|
+|88    |MUL__88 |     1|
+|89    |MUL__89 |     1|
+|90    |MUL__9  |     1|
+|91    |MUL__90 |     1|
+|92    |MUL__91 |     1|
+|93    |MUL__92 |     1|
+|94    |MUL__93 |     1|
+|95    |MUL__94 |     1|
+|96    |MUL__95 |     1|
+|97    |MUL__96 |     1|
+|98    |MUL__97 |     1|
+|99    |MUL__98 |     1|
+|100   |MUL__99 |     1|
+|101   |RAM     |     1|
+|102   |BUFG    |     1|
+|103   |CARRY4  |   403|
+|104   |LUT1    |     3|
+|105   |LUT2    |   171|
+|106   |LUT3    |  3322|
+|107   |LUT4    |  1879|
+|108   |LUT5    |  1167|
+|109   |LUT6    | 10275|
+|110   |MUXF7   |  4080|
+|111   |MUXF8   |   880|
+|112   |FDRE    |  3182|
+|113   |FDSE    |     2|
+|114   |IBUF    |     2|
+|115   |OBUF    |    67|
++------+--------+------+
+
+Report Instance Areas: 
++------+---------+---------------+------+
+|      |Instance |Module         |Cells |
++------+---------+---------------+------+
+|1     |top      |               | 28666|
+|2     |  myCE   |Compute_Engine | 21556|
++------+---------+---------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:57 ; elapsed = 00:01:24 . Memory (MB): peak = 942.262 ; gain = 687.223
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 17 critical warnings and 3 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:45 ; elapsed = 00:01:18 . Memory (MB): peak = 942.262 ; gain = 341.918
+Synthesis Optimization Complete : Time (s): cpu = 00:00:57 ; elapsed = 00:01:25 . Memory (MB): peak = 942.262 ; gain = 687.223
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 5365 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+239 Infos, 9 Warnings, 17 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:01 ; elapsed = 00:01:30 . Memory (MB): peak = 942.262 ; gain = 698.742
+INFO: [Common 17-1381] The checkpoint 'C:/Users/m_waseem/Semester_project/Semester_project.runs/synth_1/main_module.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file main_module_utilization_synth.rpt -pb main_module_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.097 . Memory (MB): peak = 942.262 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Jan 26 21:28:36 2022...
